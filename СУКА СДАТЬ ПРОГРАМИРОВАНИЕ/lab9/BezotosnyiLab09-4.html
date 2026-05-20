@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Геометрична карта-навігатор</title>
+</head>
+<body>
+
+    <center>
+        <h1>Інтерактивні геометричні фігури</h1>
+        <p>Клацніть на фігуру, щоб перейти до опису її властивостей.</p>
+
+        <map name="shapes_map">
+            <area shape="rect" coords="50,50,200,200" href="https://uk.wikipedia.org/wiki/Прямокутник" title="Дізнатися про Прямокутник" target="_blank">
+            
+            <area shape="circle" coords="350,125,75" href="https://uk.wikipedia.org/wiki/Коло" title="Дізнатися про Коло" target="_blank">
+            
+            <area shape="poly" coords="500,200,550,50,600,200" href="https://uk.wikipedia.org/wiki/Трикутник" title="Дізнатися про Трикутник" target="_blank">
+        </map>
+
+        <img src="figures.png" width="650" height="300" border="1" usemap="#shapes_map" alt="Геометричні фігури">
+    </center>
+
+</body>
+</html>
