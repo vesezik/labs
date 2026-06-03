@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html>
 <head>
+    <title>Навігаційна карта лабораторних</title>
     <meta charset="UTF-8">
-    <title>Геометрична карта-навігатор</title>
 </head>
-<body>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
 
-    <center>
-        <h1>Інтерактивні геометричні фігури</h1>
-        <p>Клацніть на фігуру, щоб перейти до опису її властивостей.</p>
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
 
-        <map name="shapes_map">
-            <area shape="rect" coords="50,50,200,200" href="https://uk.wikipedia.org/wiki/Прямокутник" title="Дізнатися про Прямокутник" target="_blank">
+    <h2 align="center">Картируване зображення геометричних фігур</h2>
+    <p align="center">Клікайте по фігурах для швидкого переходу між роботами:</p>
+
+    <div align="center">
+        <map name="geom_map">
+            <area shape="rect" coords="20,30,200,170" href="BezotosnyiLab02-9.html" alt="Домашня сторінка" title="Відкрити Домашню сторінку (ЛР №2)">
             
-            <area shape="circle" coords="350,125,75" href="https://uk.wikipedia.org/wiki/Коло" title="Дізнатися про Коло" target="_blank">
+            <area shape="circle" coords="325,100,65" href="BezotosnyiLab08-6.html" alt="Мої гіперпосилання" title="Відкрити Мої гіперпосилання (ЛР №8)">
             
-            <area shape="poly" coords="500,200,550,50,600,200" href="https://uk.wikipedia.org/wiki/Трикутник" title="Дізнатися про Трикутник" target="_blank">
+            <area shape="poly" coords="460,160,530,30,600,160" href="BezotosnyiLab09-3.html" alt="Моя Батьківщина" title="Відкрити сторінку про Полтаву (ЛР №9-3)">
         </map>
 
-        <img src="figures.png" width="650" height="300" border="1" usemap="#shapes_map" alt="Геометричні фігури">
-    </center>
+        <img src="shapes_menu.jpg" width="620" height="200" border="1" style="border-color: #00afb9;" usemap="#geom_map" alt="Панель навігації">
+    </div>
+
+    <br>
+    <table border="1" align="center" cellpadding="8" cellspacing="0" style="border-color: #333; width: 70%;">
+        <tr bgcolor="#222">
+            <th>Фігура на карті</th>
+            <th>Файл посилання</th>
+        </tr>
+        <tr>
+            <td align="center"><b>Прямокутник (Rect)</b></td>
+            <td>Домашня сторінка (BezotosnyiLab02-9.html)</td>
+        </tr>
+        <tr>
+            <td align="center"><b>Коло (Circle)</b></td>
+            <td>Мої гіперпосилання (BezotosnyiLab08-6.htm)</td>
+        </tr>
+        <tr>
+            <td align="center"><b>Многокутник (Poly)</b></td>
+            <td>Моя Батьківщина — Полтава (BezotosnyiLab09-3.htm)</td>
+        </tr>
+    </table>
 
 </body>
 </html>
