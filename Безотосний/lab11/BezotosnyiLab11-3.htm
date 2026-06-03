@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторна №11 - Завдання 3</title>
+    <meta charset="UTF-8">
+</head>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
+    <h2 align="center"><font color="#00afb9">Завдання 3: Стандартизована анкета студента</font></h2>
+    <div align="center">
+        <form action="form_ok.htm" method="GET">
+            <fieldset style="border-color: #333; width: 500px; font-family: sans-serif;">
+                <legend><font color="#00afb9">Персональні дані</font></legend>
+                <p align="left">Прізвище, Ім'я: <input type="text" name="fio" size="40"></p>
+                <p align="left">Стать: <input type="radio" name="g" value="m"> Чоловіча <input type="radio" name="g" value="f"> Жіноча</p>
+                <p align="left">Спеціалізація: 
+                    <select name="spec">
+                        <option value="it" selected>Комп'ютерні науки</option>
+                        <option value="electro">Електроенергетика</option>
+                    </select>
+                </p>
+                <p align="left"><input type="submit" value="Надіслати анкету"> <input type="reset" value="Очистити"></p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

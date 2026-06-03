@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторна №11 - Завдання 1</title>
+    <meta charset="UTF-8">
+</head>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
+    <h2 align="center"><font color="#00afb9">Лабораторна робота №11. Завдання 1: Створення базової форми</font></h2>
+    <div align="center">
+        <form action="form_ok.htm" target="_blank">
+<pre style="font-family: sans-serif; font-size: 14px; color: #8d8d8d; text-align: left; display: inline-block;">
+Ваше ім'я: <input name="name" type="text" maxlength="40" size="40" value=""><br><br>
+Ваша стать: <input type="radio" name="pol" value="male">Чоловіча                    <input type="radio" name="pol" value="female">Жіноча<br><br>
+На якому курсі Ви навчаєтесь?                 <select name="curs" size="1">
+                          <option value="1" selected> Перший </option>
+                          <option value="2">Другий</option>
+                          <option value="3">Третій</option>
+                          <option value="4">Четвертий</option>
+                          <option value="5">П'ятий </option>
+                   </select><br><br>
+Які дисципліни ви вивчаєте на курсі?
+<input type="checkbox" name="web" value="yes" checked> WEB-програмування        <input type="checkbox" name="eldinam" value="yes"> Технічна електродинаміка<br><br>
+Напишіть декілька слів про себе: </pre>
+            <br><textarea name="about" rows="6" cols="60" wrap="off"></textarea><br><br>
+            <p>
+                <input type="submit" value=" Відіслати дані ">
+                <input type="reset" value=" Очистити форму ">
+                <input type="file" name="friend" size="50" accept="image/*">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

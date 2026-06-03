@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторна №11 - Завдання 4</title>
+    <meta charset="UTF-8">
+</head>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
+    <h2 align="center"><font color="#f72585">Завдання 4: Форма замовлення товарів</font></h2>
+    <div align="center">
+        <form action="form_ok.htm" method="POST">
+            <table border="0" cellpadding="6" style="font-family: sans-serif;">
+                <tr><td>Номер банківського рахунку:</td><td><input type="text" name="bank_num" size="25" maxlength="16"></td></tr>
+                <tr><td>Особистий номер користувача:</td><td><input type="text" name="user_id" size="25" maxlength="10"></td></tr>
+                <tr><td>Оберіть товари (мульти-вибір):</td><td>
+                    <select name="goods" size="3" multiple>
+                        <option value="p1">Процесор Intel Core i7</option>
+                        <option value="p2">Відеокарта RTX 4060</option>
+                        <option value="p3">Монітор CyberView</option>
+                    </select>
+                </td></tr>
+                <tr><td>Вид оплати:</td><td>
+                    <input type="radio" name="pay" value="cash" checked> Готівковий 
+                    <input type="radio" name="pay" value="card"> Безготівковий
+                </td></tr>
+                <tr><td>Бажана інформація у відповіді:</td><td>
+                    <input type="checkbox" name="sub1" value="balance"> Дані про залишки на рахунку<br>
+                    <input type="checkbox" name="sub2" value="history"> Список останніх виплат
+                </td></tr>
+                <tr><td>Коментар до замовлення:</td><td><textarea name="order_comm" rows="3" cols="30"></textarea></td></tr>
+                <tr><td colspan="2" align="center"><input type="reset" value="Скинути"> <input type="submit" value="Оформити"></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

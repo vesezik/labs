@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторна №11 - Завдання 2</title>
+    <meta charset="UTF-8">
+</head>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
+    <h2 align="center"><font color="#f72585">Завдання 2: Анкета IT-Спеціаліста (Всі елементи)</font></h2>
+    <div align="center">
+        <form action="form_ok.htm" method="POST">
+            <table border="0" cellpadding="6" style="font-family: sans-serif; color: #8d8d8d;">
+                <tr><td>Логін (text):</td><td><input type="text" name="login" size="25"></td></tr>
+                <tr><td>Пароль (password):</td><td><input type="password" name="pass" size="25"></td></tr>
+                <tr><td>Напрямок (radio):</td><td>
+                    <input type="radio" name="dev" value="front" checked> Frontend
+                    <input type="radio" name="dev" value="back"> Backend
+                </td></tr>
+                <tr><td>Стек технологій (checkbox):</td><td>
+                    <input type="checkbox" name="html" checked> HTML/CSS
+                    <input type="checkbox" name="js"> JavaScript
+                </td></tr>
+                <tr><td>Досвід роботи (select):</td><td>
+                    <select name="exp">
+                        <option value="1">Немає досвіду</option>
+                        <option value="2">1-3 роки</option>
+                    </select>
+                </td></tr>
+                <tr><td>Резюме (file):</td><td><input type="file" name="resume"></td></tr>
+                <tr><td>Коротке коментар (textarea):</td><td><textarea name="comment" rows="3" cols="30">Мої цілі...</textarea></td></tr>
+                <tr><td>Дія скрипта (button):</td><td><input type="button" value="Тест системи" onclick="alert('Форма готова до тестування!');"></td></tr>
+                <tr><td colspan="2" align="center"><br><input type="reset" value="СКАСУВАТИ"><input type="submit" value="ВІДПРАВИТИ ДАНІ"></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

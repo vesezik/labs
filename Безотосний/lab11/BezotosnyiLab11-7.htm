@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторна №11 - Завдання 7</title>
+    <meta charset="UTF-8">
+</head>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
+    <h2 align="center"><font color="#00afb9">Завдання 7: Анкета читача віртуальної бібліотеки</font></h2>
+    <div align="center">
+        <form action="form_ok.htm">
+            <table border="0" cellpadding="6" style="font-family: sans-serif;">
+                <tr><td>Прізвище та Ім'я:</td><td><input type="text" name="reader_fio" size="30"></td></tr>
+                <tr><td>Пароль картки читача:</td><td><input type="password" name="reader_pass" size="30"></td></tr>
+                <tr><td>Стать:</td><td>
+                    <input type="radio" name="sex" value="m" checked> Чоловіча 
+                    <input type="radio" name="sex" value="f"> Жіноча
+                </td></tr>
+                <tr><td>Рід занять (5 прапорців):</td><td>
+                    <input type="checkbox" name="job1"> Студент <input type="checkbox" name="job2"> Розробник
+                    <input type="checkbox" name="job3"> Науковець <input type="checkbox" name="job4"> Інженер
+                    <input type="checkbox" name="job5"> Інше
+                </td></tr>
+                <tr><td>Ваш віковий діапазон:</td><td>
+                    <input type="radio" name="age" value="r1"> до 18 років
+                    <input type="radio" name="age" value="r2" checked> 18-25 років
+                    <input type="radio" name="age" value="r3"> 26-40 років
+                    <input type="radio" name="age" value="r4"> більше 40
+                </td></tr>
+                <tr><td>Цікава тематика (мінімум 10, утримуйте Ctrl для вибору кількох):</td><td>
+                    <select name="topics" size="5" multiple>
+                        <option value="t1">Веб-програмування</option><option value="t2">Штучний інтелект</option>
+                        <option value="t3">Робототехніка</option><option value="t4">Кібербезпека</option>
+                        <option value="t5">Бази даних</option><option value="t6">Фантастика</option>
+                        <option value="t7">Історія</option><option value="t8">Психологія</option>
+                        <option value="t9">Класична література</option><option value="t10">Графічний дизайн</option>
+                    </select>
+                </td></tr>
+                <tr><td>Що зараз читаєте?</td><td><textarea name="current_book" rows="3" cols="35">Методичку з веб-дизайну...</textarea></td></tr>
+                <tr><td colspan="2" align="center"><input type="reset" value="Видалити помилки"> <input type="submit" value="Надіслати анкету"></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

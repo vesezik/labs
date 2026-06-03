@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторна №11 - Завдання 5</title>
+    <meta charset="UTF-8">
+</head>
+<body bgcolor="#111112" text="#8d8d8d" link="#00afb9" vlink="#f72585">
+    <p align="right"><a href="BezotosnyiLab02-9.html">на головну сторінку</a></p>
+    <h2 align="center"><font color="#00afb9">Завдання 5: Опитування про кібербезпеку</font></h2>
+    <div align="center">
+        <form action="form_ok.htm" method="POST">
+            <table border="0" cellpadding="6" style="font-family: sans-serif;">
+                <tr><td>Прізвище та Ім'я:</td><td><input type="text" name="username"></td></tr>
+                <tr><td>Пароль доступу:</td><td><input type="password" name="userpass"></td></tr>
+                <tr><td>Рівень знань ОС:</td><td>
+                    <select name="os_level">
+                        <option value="beg">Новачок</option>
+                        <option value="adv">Впевнений користувач</option>
+                    </select>
+                </td></tr>
+                <tr><td>Умови безпеки (2 варіанти):</td><td>
+                    <input type="checkbox" name="rule1"> Антивірус активований<br>
+                    <input type="checkbox" name="rule2"> Двофакторна автентифікація
+                </td></tr>
+                <tr><td>Частота зміни паролів:</td><td>
+                    <input type="radio" name="change" value="month" checked> Щомісяця
+                    <input type="radio" name="change" value="year"> Раз на рік
+                </td></tr>
+                <tr><td>Текст відгуку/Досвід зламу:</td><td><textarea name="exp_text" rows="4" cols="40"></textarea></td></tr>
+                <tr><td colspan="2" align="center"><input type="reset" value="Корегувати"> <input type="submit" value="Відправити"></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
