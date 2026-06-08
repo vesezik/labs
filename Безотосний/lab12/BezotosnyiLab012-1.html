@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація користувача</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #34a2fe;
+            color: white;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff3b30;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .author-text {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0 120px 0;
+        }
+        .form-wrapper {
+            width: 400px;
+            border: 1px solid #c3c3c3;
+            background-color: #ffffff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.05);
+        }
+        .form-title {
+            background-color: #34a2fe;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin: 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .form-body {
+            padding: 20px 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #c3c3c3;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+        .btn-submit {
+            padding: 5px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #7a7a7a;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #263238;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <div class="logo-text">Мій особистий блог</div>
+            <div class="author-text">Ісак Георгій</div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Вхід</a>
+            <a href="IsakLab10-1.html">Реєстрація</a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="form-wrapper">
+            <h3 class="form-title">Реєстрація користувача</h3>
+            <div class="form-body">
+                <div class="form-group">
+                    <label>Прізвище</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Ім'я</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Логін</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Навчальна група</label>
+                    <select>
+                        <option>102-ТК</option>
+                        <option>101-ТК</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password">
+                </div>
+                <div class="form-group">
+                    <label>Підтвердження пароля</label>
+                    <input type="password">
+                </div>
+                <div class="btn-container">
+                    <button class="btn-submit">Зареєструватись</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © Всі права захищено.<br>
+        Розробник: Студент групи 102-ТК Ісак Г.В.
+    </footer>
+
+</body>
+</html>

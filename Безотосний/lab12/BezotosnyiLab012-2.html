@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Git Шпаргалка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #34a2fe;
+            color: white;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff3b30;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .author-text {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+        .content-container {
+            padding: 30px 40px 120px 40px;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .column h3 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .col-create h3 { color: #5bc0de; }
+        .col-observe h3 { color: #4682b4; }
+        .col-branches h3 { color: #a2cd5a; }
+        .col-change h3 { color: #556b2f; }
+        .col-sync h3 { color: #ff8c00; }
+        .col-finally h3 { color: #d9534f; }
+
+        .cmd-block {
+            margin-bottom: 15px;
+        }
+        .cmd-desc {
+            font-size: 12px;
+            color: #666666;
+            margin-bottom: 3px;
+        }
+        .cmd-text {
+            font-family: monospace;
+            font-size: 13px;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+        }
+        .link-training {
+            color: #34a2fe;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        footer {
+            background-color: #263238;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <div class="logo-text">Мій особистий блог</div>
+            <div class="author-text">Ісак Георгій</div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Вхід</a>
+            <a href="#">Реєстрація</a>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <div class="grid-layout">
+            
+            <div class="column col-create">
+                <h3>Create a Repository</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">From scratch -- Create a new local repository</div>
+                    <p class="cmd-text">$ git init [project name]</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Download from an existing repository</div>
+                    <p class="cmd-text">$ git clone my_url</p>
+                </div>
+
+                <div class="column col-observe" style="margin-top: 30px;">
+                    <h3>Observe your Repository</h3>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">List new or modified files not yet committed</div>
+                        <p class="cmd-text">$ git status</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the changes to files not yet staged</div>
+                        <p class="cmd-text">$ git diff</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the changes to staged files</div>
+                        <p class="cmd-text">$ git diff --cached</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show all staged and unstaged file changes</div>
+                        <p class="cmd-text">$ git diff HEAD</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the changes between two commit ids</div>
+                        <p class="cmd-text">$ git diff commit1 commit2</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">List the change dates and authors for a file</div>
+                        <p class="cmd-text">$ git blame [file]</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show the file changes for a commit id and/or file</div>
+                        <p class="cmd-text">$ git show [commit]:[file]</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show full change history</div>
+                        <p class="cmd-text">$ git log</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Show change history for file/directory including diffs</div>
+                        <p class="cmd-text">$ git log -p [file/directory]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column col-branches">
+                <h3>Working with Branches</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">List all local branches</div>
+                    <p class="cmd-text">$ git branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">List all branches, local and remote</div>
+                    <p class="cmd-text">$ git branch -av</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Switch to a branch, my_branch, and update working directory</div>
+                    <p class="cmd-text">$ git checkout my_branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Create a new branch called new_branch</div>
+                    <p class="cmd-text">$ git branch new_branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Delete the branch called my_branch</div>
+                    <p class="cmd-text">$ git branch -d my_branch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Merge branch_a into branch_b</div>
+                    <p class="cmd-text">$ git checkout branch_b</p>
+                    <p class="cmd-text">$ git merge branch_a</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Tag the current commit</div>
+                    <p class="cmd-text">$ git tag my_tag</p>
+                </div>
+            </div>
+
+            <div class="column col-change">
+                <h3>Make a change</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Stages the file, ready for commit</div>
+                    <p class="cmd-text">$ git add [file]</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Stage all changed files, ready for commit</div>
+                    <p class="cmd-text">$ git add .</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Commit all staged files to versioned history</div>
+                    <p class="cmd-text">$ git commit -m "commit message"</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Commit all your tracked files to versioned history</div>
+                    <p class="cmd-text">$ git commit -am "commit message"</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Unstages file, keeping the file changes</div>
+                    <p class="cmd-text">$ git reset [file]</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Revert everything to the last commit</div>
+                    <p class="cmd-text">$ git reset --hard</p>
+                </div>
+            </div>
+
+            <div class="column col-sync">
+                <h3>Synchronize</h3>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Get the latest changes from origin (no merge)</div>
+                    <p class="cmd-text">$ git fetch</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Fetch the latest changes from origin and merge</div>
+                    <p class="cmd-text">$ git pull</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Fetch the latest changes from origin and rebase</div>
+                    <p class="cmd-text">$ git pull --rebase</p>
+                </div>
+                <div class="cmd-block">
+                    <div class="cmd-desc">Push local changes to the origin</div>
+                    <p class="cmd-text">$ git push</p>
+                </div>
+
+                <div class="column col-finally" style="margin-top: 30px; padding: 0;">
+                    <h3>Finally!</h3>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">When in doubt, use git help</div>
+                        <p class="cmd-text">$ git command --help</p>
+                    </div>
+                    <div class="cmd-block">
+                        <div class="cmd-desc">Or visit official GitHub training:</div>
+                        <a class="link-training" href="https://training.github.com/">https://training.github.com/</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        © Всі права захищено.<br>
+        Розробник: Студент групи 102-ТК Ісак Г.В.
+    </footer>
+
+</body>
+</html>
